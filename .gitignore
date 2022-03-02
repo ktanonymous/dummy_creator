@@ -128,5 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# json for operation check
-spec.json
+# for operation check
+json/
