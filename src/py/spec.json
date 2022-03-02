@@ -1,0 +1,14 @@
+{
+    "salary": {
+        "number": 800,
+        "dist": "log-normal"
+    },
+    "gender": {
+        "number": 800,
+        "kinds": {
+            "1": "male",
+            "2": "female"
+        },
+        "dist": "uniform"
+    }
+}
