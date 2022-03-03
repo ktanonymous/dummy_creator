@@ -21,6 +21,8 @@ import os
 
 from typing import Dict, List, Tuple
 
+from .core import create_data
+
 
 def create_dummy(n_data: int = 1000, *args, **kwargs):
     try:
@@ -37,10 +39,10 @@ def create_dummy(n_data: int = 1000, *args, **kwargs):
     is_file = os.path.isfile(input_file)
     if input_file and is_file:
         with open(input_file, 'r') as f:
-            parameters = json.laod(f)
+            parameters = json.load(f)
     else:
         try:
-            parameters = kwargs['parameters']
+            parameters = dict(kwargs['parameters'])
         except KeyError:
             print('Please specify parameter of json file representting parameter.')
             return
