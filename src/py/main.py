@@ -24,7 +24,7 @@ from typing import Dict, List, Tuple
 from .core import create_data
 
 
-def create_dummy(n_data: int = 1000, *args, **kwargs):
+def create_dummy(n_data: int = 1000, **kwargs):
     try:
         input_file = kwargs['input_file']
     except KeyError:
