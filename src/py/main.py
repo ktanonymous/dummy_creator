@@ -24,12 +24,7 @@ from typing import Dict, List, Tuple
 from .core import create_data
 
 
-def create_dummy(**kwargs):
-    try:
-        input_file = kwargs['input_file']
-    except KeyError:
-        input_file = None
-
+def create_dummy(input_file: str = None, **kwargs):
     is_file = os.path.isfile(input_file)
     if input_file and is_file:
         with open(input_file, 'r') as f:
