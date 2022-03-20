@@ -1,6 +1,6 @@
 # In the beginning
 
-- I'm not good at English, so I apologize for my poor English.
+- I'm not good at English and development, so I apologize for my poor English and development.
 - if you find or notice points to be improved, I would appreciate if you told me.
 - You can't `pip install` now, so ,in the future, I want to applicable `pip install`.
 - This generator is imperfect.
