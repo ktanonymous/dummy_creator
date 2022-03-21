@@ -3,7 +3,7 @@ import numpy as np
 import random
 import sys
 
-from .const.dist import LOG_NORMAL, NORMAL, RANDOM, UNIFORM
+from .const import LOG_NORMAL, NORMAL, RANDOM, UNIFORM
 
 
 def _create_dummy(parameters: dict) -> dict:
