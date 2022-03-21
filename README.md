@@ -1,8 +1,8 @@
 # In the beginning
 
 - I'm not good at English and development, so I apologize for my poor English and development.
-- if you find or notice points to be improved, I would appreciate if you told me.
-- You can't `pip install` now, so ,in the future, I want to applicable `pip install`.
+- If you find or notice points to be improved, I would appreciate if you told me.
+- This project hasn't uploaded to PyPI.
 - This generator is imperfect.
 
 # dummy_creator
@@ -14,14 +14,16 @@ Now, you can define parameters with a json file, and output data will create in 
 
 ## How to use
 
-1. Please clone this project.
-1. In the script, import main function from dummy_creator/src/py/main.py
-1. Call main function with defining `input_file`.
-1. You will find dummy data in csv folder.
+1. Please clone this project.(`$ git clone ~`)
+1. In the project directory, use `pip install .` command.
+1. You can use this generator with `from dummy_creator import create_dummy` script.
+1. You will find dummy data in csv folder with this generator.
 
-## Example of input file
+## Example
 
 Show very simple input file example below.
+
+input_file.json
 
 ```JSON:input_file.json
 {
@@ -39,11 +41,28 @@ Show very simple input file example below.
 }
 ```
 
-With this input file, you can create 800 dummy data of gender in the ratio of 6:4.
+With this input file, you can create 800 dummy data of gender in the ratio of 6:4.  
+If you want to use this input file, for example, write script like below.
+
+example.py
+
+```Python: example.py
+from dummy_creator import create_dummy
+
+input_file = 'input_file.json'
+create_dummy(input_file=input_file.json)
+```
+
+Dummy data will be created like below.
+
+```
+csv
+  ┗ gender.csv
+```
 
 ## Kinds of distribution
 
-You can use distribution showed below.
+Now, you can use distribution showed below.
 
 - Normal probability distribution (Gauss distribution)
 - Logarithmic normal distribution
