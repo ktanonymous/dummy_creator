@@ -25,7 +25,7 @@ Show very simple input file example below.
 
 input_file.json
 
-```JSON:input_file.json
+```JSON
 {
     "gender": {
         "number": 800,
@@ -46,7 +46,7 @@ If you want to use this input file, for example, write script like below.
 
 example.py
 
-```Python: example.py
+```Python
 from dummy_creator import create_dummy
 
 input_file = 'input_file.json'
