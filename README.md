@@ -14,8 +14,12 @@ Now, you can define parameters with a json file, and output data will create in 
 
 ## How to use
 
-1. Please clone this project.(`$ git clone ~`)
-1. In the project directory, use `pip install .` command.
+1. Make this generator available.(You need to run either `pattern1` or `pattern2`)
+   1. pattern1
+      1. Please clone this project.(`$ git clone ~`)
+      1. In the project directory, use `pip install .` command.
+   1. pattern2
+      1. use `pip install git+https://github.com/ktanonymous/dummy_creator` command.
 1. You can use this generator with `from dummy_creator import create_dummy` script.
 1. You will find dummy data in csv folder with this generator.
 
