@@ -79,8 +79,8 @@ def normal(parameters, labels: dict, n_data: int):
         loc = 0.0
         scale = 1.0
 
-    np.random.normal(loc=loc, scale=scale, size=(n_data, 1))
-    pass
+    rows = np.random.normal(loc=loc, scale=scale, size=(n_data, 1))
+    return rows
 
 
 def uniform(parameters, labels: dict, n_data: int):
@@ -93,7 +93,7 @@ def uniform(parameters, labels: dict, n_data: int):
         high = 1.0
 
     # low 以上 high 未満の一様分布
-    np.random.uniform(low=low, high=high, size=(n_data, 1))
+    rows = np.random.uniform(low=low, high=high, size=(n_data, 1))
     return rows
 
 
