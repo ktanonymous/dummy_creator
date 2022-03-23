@@ -10,4 +10,5 @@ setup(
     package_dir={'': 'src'},
     install_requires=['numpy'],
     long_description='README.md',
+    license='MIT License'
 )
