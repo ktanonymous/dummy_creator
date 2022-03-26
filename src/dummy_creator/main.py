@@ -1,21 +1,3 @@
-"""生成データ数、データ種、データ分布を指定してデータを生成させる？
-json例？
-{
-    name1: {
-        number: 1000,
-        kinds: {
-            name1,
-            name2,
-            ...
-        }
-        dist: random/etc.
-    },
-    name2: {
-        ...
-    },
-    ...
-}
-"""
 import json
 import os
 
