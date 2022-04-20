@@ -18,6 +18,6 @@ def create_dummy(input_file: str = None, **kwargs):
             print('Please specify parameter of json file representting parameter.')
             return
 
-    data = create_data(parameters)
+    keys = list(create_data(parameters))
 
-    return
+    return keys

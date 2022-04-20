@@ -16,4 +16,4 @@ def create_data(parameters: dict) -> dict:
             writer.writerow(data['header'])
             writer.writerows(data['rows'])
 
-    return data
+    return keys
