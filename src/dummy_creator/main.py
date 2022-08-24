@@ -1,23 +1,25 @@
 import json
 import os
 
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional
 
 from .core import create_data
 
 
-def create_dummy(input_file: str = None, **kwargs):
-    is_file = os.path.isfile(input_file)
-    if input_file and is_file:
-        with open(input_file, 'r') as f:
-            parameters = json.load(f)
+def create_dummy(params: List[Dict[str, str]],
+                 input_files: Optional[List[str]] = None):
+    data: dict = {}
+
+    if input_files is None:
+        assert issubclass(type(params), list)
+        for i, param in enumerate(params):
+            data[i] = create_data(param)
     else:
-        try:
-            parameters = dict(kwargs['parameters'])
-        except KeyError:
-            print('Please specify parameter of json file representting parameter.')
-            return
+        assert issubclass(type(input_files), list)
+        for i, input_file in enumerate(input_files):
+            assert os.path.isfile(input_file)
+            with open(input_file, 'r') as f:
+                parameters = json.load(f)
+            data[i] = create_data(parameters)
 
-    keys = list(create_data(parameters))
-
-    return keys
+    return data
