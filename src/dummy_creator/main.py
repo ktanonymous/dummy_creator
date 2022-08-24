@@ -7,7 +7,9 @@ from .core import create_data
 
 
 def create_dummy(input_file: str = None, **kwargs):
-    is_file = os.path.isfile(input_file)
+    if input_file is not None:
+        is_file = os.path.isfile(input_file)
+
     if input_file and is_file:
         with open(input_file, 'r') as f:
             parameters = json.load(f)
@@ -18,6 +20,7 @@ def create_dummy(input_file: str = None, **kwargs):
             print('Please specify parameter of json file representting parameter.')
             return
 
-    keys = list(create_data(parameters))
+    # keys = list(create_data(parameters))
+    data = create_data(parameters)
 
-    return keys
+    return data
