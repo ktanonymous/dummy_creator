@@ -1,13 +1,14 @@
 import json
 import os
 
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Union
 
 from .core import create_data
 
 
 def create_dummy(params: List[Dict[str, str]],
-                 input_files: Optional[List[str]] = None):
+                 input_files: Optional[List[str]] = None,
+                 out_file: bool = False) -> Dict[str, Union[int, float]]:
     data: dict = {}
 
     if input_files is None:
@@ -20,6 +21,6 @@ def create_dummy(params: List[Dict[str, str]],
             assert os.path.isfile(input_file)
             with open(input_file, 'r') as f:
                 parameters = json.load(f)
-            data[i] = create_data(parameters)
+            data[i] = create_data(parameters, out_file=out_file)
 
     return data
